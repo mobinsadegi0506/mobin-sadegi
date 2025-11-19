@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>سایت شخصی من | نمونه‌کار، رزومه، بلاگ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-loader" id="page-loader">
+      <div class="loader-core">
+        <div class="loader-ring"></div>
+        <p class="loader-eyebrow" data-i18n="loader.subtitle">
+          در حال آماده‌سازی تجربه
+        </p>
+        <h2 data-i18n="loader.title">لطفاً چند ثانیه صبر کنید...</h2>
+      </div>
+    </div>
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+    <header class="navbar">
+      <div class="brand">
+        <div class="logo-pulse"></div>
+        <div>
+          <strong data-i18n="brand.name">مبین صادقی</strong>
+          <span data-i18n="brand.role">توسعه‌دهنده خلاق</span>
+        </div>
+      </div>
+      <nav>
+        <a href="#hero" data-i18n="nav.home">خانه</a>
+        <a href="#about" data-i18n="nav.about">درباره من</a>
+        <a href="#skills" data-i18n="nav.skills">مهارت‌ها</a>
+        <a href="#resume" data-i18n="nav.resume">رزومه</a>
+        <a href="#blog" data-i18n="nav.blog">بلاگ</a>
+        <a href="#contact" class="btn" data-i18n="nav.contact">تماس</a>
+      </nav>
+      <div class="lang-switch desktop-lang" role="group" aria-label="انتخاب زبان">
+        <button type="button" class="active" data-lang="fa">فا</button>
+        <button type="button" data-lang="en">En</button>
+      </div>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <nav>
+        <a href="#hero" data-i18n="nav.home">خانه</a>
+        <a href="#about" data-i18n="nav.about">درباره من</a>
+        <a href="#skills" data-i18n="nav.skills">مهارت‌ها</a>
+        <a href="#resume" data-i18n="nav.resume">رزومه</a>
+        <a href="#blog" data-i18n="nav.blog">بلاگ</a>
+        <a href="#contact" data-i18n="nav.contact">تماس</a>
+      </nav>
+      <div
+        class="lang-switch mobile-lang"
+        role="group"
+        aria-label="انتخاب زبان"
+      >
+        <button type="button" class="active" data-lang="fa">فا</button>
+        <button type="button" data-lang="en">En</button>
+      </div>
+      <div class="mobile-menu-footer">
+        <p data-i18n="menu.cta">برای شروع همکاری پیام بده.</p>
+        <a class="btn primary" href="#contact" data-i18n="menu.button"
+          >ارسال درخواست</a
+        >
+      </div>
+    </div>
+    <div class="menu-backdrop" id="menu-backdrop" aria-hidden="true"></div>
+
+    <section id="hero" class="hero glass-card">
+      <div class="hero-text">
+        <p class="eyebrow" data-i18n="hero.role">طراح و توسعه‌دهنده وب</p>
+        <h1>
+          <span data-i18n="hero.greeting">سلام! من</span>
+          <span class="gradient-text" data-i18n="hero.name">مبین صادقی</span>
+          <span data-i18n="hero.afterName">هستم</span>
+        </h1>
+        <p data-i18n="hero.description">
+          تجربه‌ساز دیجیتال با تمرکز بر طراحی رابط کاربری، توسعه فرانت‌اند و
+          خلق تجربه‌های تعاملی سریع و جذاب برای برندهای آینده‌نگر.
+        </p>
+        <div class="hero-cta">
+          <a class="btn primary" href="#portfolio" data-i18n="hero.ctaPrimary"
+            >مشاهده نمونه‌کار</a
+          >
+          <a class="btn ghost" href="#contact" data-i18n="hero.ctaSecondary"
+            >همکاری جدید</a
+          >
+        </div>
+        <div class="stats">
+          <div>
+            <span>+۷</span>
+            <span data-i18n="hero.statYears">سال تجربه</span>
+          </div>
+          <div>
+            <span>+۴۰</span>
+            <span data-i18n="hero.statProjects">پروژه موفق</span>
+          </div>
+          <div>
+            <span>+۲۰</span>
+            <span data-i18n="hero.statClients">مشتری راضی</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-frame">
+        <div class="hero-photo">
+          <img src="profile.jpg" alt="تصویر پرتره مبین صادقی" />
+        </div>
+        <div class="floating-card">
+          <p data-i18n="hero.floatText">
+            آماده‌ام رویای دیجیتال شما را به واقعیت تبدیل کنم.
+          </p>
+          <small data-i18n="hero.floatSub">در دسترس برای همکاری</small>
+        </div>
+      </div>
+    </section>
+
+    <section id="trust" class="trust-section glass-card">
+      <h2 data-i18n="trust.title">همکاری با برندهای خوش‌نام</h2>
+      <div class="trust-logos">
+        <span>TechLand</span>
+        <span>Nova Studio</span>
+        <span>FutureX</span>
+        <span>PixelWave</span>
+        <span>UI Craft</span>
+      </div>
+      <div class="enamad">
+        <div class="badge-placeholder">
+        </div>
+        <div class="enamad-badge">
+          <p data-i18n="trust.embedLabel">نماد اعتماد فعال</p>
+          <a
+            href="https://enamad.ir"
+            target="_blank"
+            rel="noopener"
+            aria-label="نماد اعتماد الکترونیکی"
+          >
+            <svg viewBox="0 0 120 140" role="img" aria-hidden="true">
+              <defs>
+                <linearGradient id="badge-grad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#42e8df" />
+                  <stop offset="100%" stop-color="#5c6cf7" />
+                </linearGradient>
+              </defs>
+              <path
+                d="M60 5L15 30v55c0 28 18 50 45 55c27-5 45-27 45-55V30L60 5z"
+                fill="url(#badge-grad)"
+              />
+              <path
+                d="M38 73c0 10 9 19 22 19s22-9 22-19"
+                stroke="#fff"
+                stroke-width="6"
+                stroke-linecap="round"
+                fill="none"
+              />
+              <circle cx="60" cy="50" r="18" fill="rgba(255,255,255,0.25)" />
+              <text
+                x="60"
+                y="57"
+                text-anchor="middle"
+                font-size="26"
+                fill="#fff"
+                font-family="IRANSans, Vazirmatn, sans-serif"
+              >
+                ا
+              </text>
+            </svg>
+            <span>enamad.ir</span>
+          </a>
+        </div>
+        <p data-i18n="trust.desc">
+          پس از دریافت نماد اعتماد الکترونیکی، اسکریپت رسمی را در این بخش
+          قرار دهید تا به صورت زنده نمایش داده شود.
+        </p>
+      </div>
+    </section>
+
+    <section id="about" class="two-col">
+      <div class="glass-card">
+        <h2 data-i18n="about.title">درباره من</h2>
+        <p data-i18n="about.description">
+          من یک توسعه‌دهنده و طراح محصولات دیجیتال هستم که عاشق حل مسئله‌های
+          پیچیده با طراحی کاربر‌ محور و کد تمیز است. با تیم‌های استارتاپی و
+          شرکت‌های بزرگ کار کرده‌ام و از ایده‌پردازی تا لانچ حضوری فعال در
+          پروژه‌ها دارم.
+        </p>
+        <ul class="about-list">
+          <li data-i18n="about.list1">
+            متخصص React، Next.js و انیمیشن‌های تعاملی
+          </li>
+          <li data-i18n="about.list2">
+            تجربه در طراحی سیستم‌های UI و دیزاین‌سیستم
+          </li>
+          <li data-i18n="about.list3">مشاور سئو فنی و بهینه‌سازی عملکرد</li>
+        </ul>
+      </div>
+      <div class="glass-card timeline">
+        <h2 data-i18n="timeline.title">سفر حرفه‌ای</h2>
+        <div class="timeline-item">
+          <span data-i18n="timeline.nowTime">۱۴۰۲ - اکنون</span>
+          <h3 data-i18n="timeline.nowTitle">
+            رهبر تیم فرانت‌اند - Nova Studio
+          </h3>
+          <p data-i18n="timeline.nowDesc">
+            رهبری تیم فرانت‌اند و توسعه داشبوردهای تعاملی پیچیده
+          </p>
+        </div>
+        <div class="timeline-item">
+          <span data-i18n="timeline.prevTime">۱۴۰۰ - ۱۴۰۲</span>
+          <h3 data-i18n="timeline.prevTitle">
+            مهندس ارشد UI - TechLand
+          </h3>
+          <p data-i18n="timeline.prevDesc">
+            طراحی و پیاده‌سازی سیستم طراحی سازمانی
+          </p>
+        </div>
+        <div class="timeline-item">
+          <span data-i18n="timeline.startTime">۱۳۹۸ - ۱۴۰۰</span>
+          <h3 data-i18n="timeline.startTitle">توسعه‌دهنده فریلنس</h3>
+          <p data-i18n="timeline.startDesc">
+            همکاری با برندهای مختلف در حوزه وب‌اپ و لندینگ‌پیج
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="glass-card">
+      <h2 data-i18n="skills.title">مهارت‌ها و تکنولوژی‌ها</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3 data-i18n="skills.frontendTitle">فرانت‌اند</h3>
+          <p data-i18n="skills.frontendDesc">React, Next.js, Vue, Astro, Vite</p>
+        </div>
+        <div class="skill-card">
+          <h3 data-i18n="skills.uiTitle">رابط کاربری و موشن</h3>
+          <p data-i18n="skills.uiDesc">
+            Framer Motion, GSAP, Three.js, Figma
+          </p>
+        </div>
+        <div class="skill-card">
+          <h3 data-i18n="skills.backendTitle">بک‌اند</h3>
+          <p data-i18n="skills.backendDesc">Node.js, Express, Supabase, Firebase</p>
+        </div>
+        <div class="skill-card">
+          <h3 data-i18n="skills.devopsTitle">دواپس</h3>
+          <p data-i18n="skills.devopsDesc">
+            Vercel, Netlify, Docker, GitHub Actions
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="glass-card">
+      <div class="section-head">
+        <h2 data-i18n="portfolio.title">نمونه‌کارهای برجسته</h2>
+        <a href="#" class="link-arrow" data-i18n="portfolio.link">مشاهده همه</a>
+      </div>
+      <div class="portfolio-grid">
+        <article>
+          <div class="tag" data-i18n="portfolio.item1.tag">وب‌اپ</div>
+          <h3 data-i18n="portfolio.item1.title">Future Dashboard</h3>
+          <p data-i18n="portfolio.item1.desc">
+            داشبورد مالی برخط با انیمیشن‌های تعاملی و تم تاریک
+          </p>
+        </article>
+        <article>
+          <div class="tag" data-i18n="portfolio.item2.tag">لندینگ</div>
+          <h3 data-i18n="portfolio.item2.title">Nova SaaS</h3>
+          <p data-i18n="portfolio.item2.desc">
+            لندینگ معرفی محصول SaaS با نرخ تبدیل بالا و تست A/B
+          </p>
+        </article>
+        <article>
+          <div class="tag" data-i18n="portfolio.item3.tag">محصول</div>
+          <h3 data-i18n="portfolio.item3.title">Pixel CMS</h3>
+          <p data-i18n="portfolio.item3.desc">
+            سیستم مدیریت محتوا برای برندهای خلاق با تم چندگانه
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="resume" class="glass-card resume">
+      <div class="section-head">
+        <h2 data-i18n="resume.title">رزومه قابل دانلود</h2>
+        <a class="btn primary" href="assets/resume.pdf" data-i18n="resume.download"
+          >دانلود PDF</a
+        >
+      </div>
+      <div class="resume-content">
+        <div>
+          <h3 data-i18n="resume.eduTitle">تحصیلات</h3>
+          <ul>
+            <li data-i18n="resume.edu1">
+              کارشناسی مهندسی نرم‌افزار - دانشگاه صنعتی (۱۳۹۳-۱۳۹۷)
+            </li>
+            <li data-i18n="resume.edu2">
+              دوره تخصصی طراحی تجربه کاربری - دانشگاه هنر برلین
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 data-i18n="resume.certTitle">گواهی‌ها</h3>
+          <ul>
+            <li data-i18n="resume.cert1">گواهی طراحی UX گوگل</li>
+            <li data-i18n="resume.cert2">مدرک Frontend حرفه‌ای متا</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="glass-card">
+      <div class="section-head">
+        <h2 data-i18n="blog.title">آخرین نوشته‌ها</h2>
+        <a href="#" class="link-arrow" data-i18n="blog.link">بلاگ</a>
+      </div>
+      <div class="blog-list">
+        <article>
+          <h3 data-i18n="blog.item1.title">
+            چگونه انیمیشن‌های وب را سبک و سریع نگه داریم؟
+          </h3>
+          <p data-i18n="blog.item1.desc">
+            راهنمایی برای استفاده از CSS و WebGL بدون کاهش عملکرد و Core Web
+            Vitals.
+          </p>
+          <a href="#" data-i18n="blog.item1.link">ادامه →</a>
+        </article>
+        <article>
+          <h3 data-i18n="blog.item2.title">
+            ۵ الگوی UI که در ۲۰۲۵ باید استفاده کنید
+          </h3>
+          <p data-i18n="blog.item2.desc">
+            روندهای جدید طراحی رابط کاربری که تجربه مینیمال و حرفه‌ای می‌سازند.
+          </p>
+          <a href="#" data-i18n="blog.item2.link">ادامه →</a>
+        </article>
+        <article>
+          <h3 data-i18n="blog.item3.title">
+            مزایای ترکیب Next.js با طراحی اتمیک
+          </h3>
+          <p data-i18n="blog.item3.desc">
+            تجربه من از ساخت سامانه‌های مدرن با تمرکز روی توسعه سریع و تست‌پذیری.
+          </p>
+          <a href="#" data-i18n="blog.item3.link">ادامه →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="glass-card contact">
+      <div>
+        <h2 data-i18n="contact.title">شروع یک همکاری</h2>
+        <p data-i18n="contact.desc">
+          برای پروژه‌های جدید و همکاری، فرم زیر را پر کنید یا ایمیل بزنید.
+        </p>
+        <ul>
+          <li data-i18n="contact.email">ایمیل: hello@example.com</li>
+          <li data-i18n="contact.phone">تلفن: ۰۹۱۲۱۲۳۴۵۶۷</li>
+          <li data-i18n="contact.linkedin">
+            لینکدین: linkedin.com/in/yourname
+          </li>
+        </ul>
+      </div>
+      <form>
+        <label>
+          <span data-i18n="contact.form.name">نام</span>
+          <input
+            type="text"
+            placeholder="نام کامل شما"
+            required
+            data-i18n-placeholder="contact.form.namePlaceholder"
+          />
+        </label>
+        <label>
+          <span data-i18n="contact.form.email">ایمیل</span>
+          <input
+            type="email"
+            placeholder="you@example.com"
+            required
+            data-i18n-placeholder="contact.form.emailPlaceholder"
+          />
+        </label>
+        <label>
+          <span data-i18n="contact.form.message">پیام</span>
+          <textarea
+            rows="4"
+            placeholder="توضیح پروژه یا سوال"
+            data-i18n-placeholder="contact.form.messagePlaceholder"
+          ></textarea>
+        </label>
+        <button type="submit" class="btn primary" data-i18n="contact.form.submit">
+          ارسال پیام
+        </button>
+      </form>
+    </section>
+
+    <footer>
+      <p data-i18n="footer.copy">© ۱۴۰۴ نام شما | ساخته شده با عشق و کمی کد</p>
+      <div class="socials">
+        <a href="#" data-i18n="footer.dribbble">دریبل</a>
+        <a href="#" data-i18n="footer.behance">بیهنس</a>
+        <a href="#" data-i18n="footer.github">گیت‌هاب</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
